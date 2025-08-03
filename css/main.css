@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+html, body {
+    margin: 0;
+    padding: 0;
+    cursor: url('../assets/ammo-rifle.png'), auto !important;
+}
+
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 7vh;
+    background:#2c2c2c;
+    margin: 0;
+    padding: 0;
+    position: sticky;
+    top:0;
+    z-index: 10;
+}
+
+body{
+    background-color: #2c2c2c;
+    cursor: url('../assets/ammo-rifle.png'), auto !important;
+}
+
+#title{
+    color: rgba(197, 65, 43, 1);
+    text-align: center;
+    font-size: 60px;
+    font-family: 'Bebas Neue', serif;
+}
+
+.link-header {
+    text-decoration: none;
+    position: relative;
+    align-self: flex-end;
+    font-family: 'Bebas Neue', serif;
+    color: #676767;
+    font-size: 25px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    margin-top:20px;
+    margin-left:40px;
+}
+
+.link-header::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background-color: rgba(197, 65, 43, 1);
+    transition: width 0.4s ease;
+}
+
+.link-header:hover {
+    color: white;
+}
+
+.link-header:hover::after {
+    width: 100%;
+}
+
+#cuadrilla {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 20px;
+}
+
+.item-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    max-width: 600px;
+}
+.name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 45px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 15px;
+    border: 1px solid #c5412b;
+    border-radius: 10px;
+}
+
+.profile-img {
+    width: 500px;
+    height: 700px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.contenedor-texto {
+    width: 400px;
+    padding: 20px;
+    margin-left: 20px;
+}
+
+.description {
+    font-family: 'Oswald', serif;
+    text-align: left;
+    font-size: 16px;
+    color: #fff;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1e1e1e;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #c5412b;
+    border-radius: 6px;
+    border: 2px solid #1e1e1e;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #e1553d;
+}
+
+#three-division{
+    display: flex;
+    justify-content: space-evenly;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Rust</title>
+    <link rel="stylesheet" href="/css/calculator.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="../js/calculator.js" defer></script>
+
+</head>
+<body>
+<header>
+    <a class="link-header" href="../index.html">CUADRILLA</a>
+    <a class="link-header" href="../paginas/calculator.html">CALCULADORA RAID</a>
+    <a class="link-header" href="../paginas/raidDamages.html">DAÑOS</a>
+    <a class="link-header" href="../paginas/recycler.html">RECICLADORA</a>
+    <a class="link-header" href="../paginas/base.html">BASE</a>
+    <a class="link-header" href="../paginas/armaduras.html">ARMADURAS</a>
+    <a class="link-header" href="../paginas/tarjetas.html">TARJETAS</a>
+</header>
+    <h1 id="title">Calculadora de Explosivos</h1>
+    <div class="half-division">
+        <div class="item">
+            <img class="weapon-icon" src="../assets/rocket.webp" alt="Rocket">
+            <input id="rocket" class="input-formal" type="number">
+            <div id="materials-rocket" class="materials-output"></div>
+        </div>
+
+        <div class="item">
+            <img class="weapon-icon" src="../assets/rocket%20hv.webp" alt="Rocket HV">
+            <input id="rocket-hv" class="input-formal" type="number">
+            <div id="materials-rocket-hv" class="materials-output"></div>
+        </div>
+
+        <div class="item">
+            <img class="weapon-icon" src="../assets/explosive-timed.webp" alt="c4">
+            <input id="c4" class="input-formal" type="number">
+            <div id="materials-c4" class="materials-output"></div>
+        </div>
+
+        <div class="item">
+            <img class="weapon-icon" src="../assets/grenade-beancan.webp" alt="beancan">
+            <input id="beancan" class="input-formal" type="number">
+            <div id="materials-beancan" class="materials-output"></div>
+        </div>
+
+        <div class="item">
+            <img class="weapon-icon" src="../assets/explosive-satchel.webp" alt="satchel">
+            <input id="satchel" class="input-formal" type="number">
+            <div id="materials-satchel" class="materials-output"></div>
+        </div>
+
+        <div class="item">
+            <img class="weapon-icon" src="../assets/ammo-rifle-explosive.webp" alt="explosive ammo">
+            <input id="explosive-ammo" class="input-formal" type="number">
+            <div id="materials-explosive-ammo" class="materials-output"></div>
+        </div>
+    </div>
+    <div class="reset-container">
+        <button id="reset-btn">Reiniciar</button>
+    </div>
+
+    <div id="total-materials" style="margin-top: 20px; padding: 10px; border-top: 2px solid #c5412b;">
+        <div id="total-list"></div>
+    </div>
+</body>
+
+</html>

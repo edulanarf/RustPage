@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rust</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/recycler.css">
+    <script src="../js/recycler.js" defer></script>
+</head>
+<body>
+<header>
+    <a class="link-header" href="../index.html">CUADRILLA</a>
+    <a class="link-header" href="../paginas/calculator.html">CALCULADORA RAID</a>
+    <a class="link-header" href="../paginas/raidDamages.html">DAÑOS</a>
+    <a class="link-header" href="../paginas/recycler.html">RECICLADORA</a>
+    <a class="link-header" href="../paginas/base.html">BASE</a>
+    <a class="link-header" href="../paginas/armaduras.html">ARMADURAS</a>
+    <a class="link-header" href="../paginas/tarjetas.html">TARJETAS</a>
+</header>
+    <h1 id="title"> RECICLADORA</h1>
+    <div id="recycler">
+        <img id="recycler-img" src="../assets/recycler-radtown.webp" alt="recicladora">
+
+        <div id="slots-container">
+            <div class="slot" data-index="0"></div>
+            <div class="slot" data-index="1"></div>
+            <div class="slot" data-index="2"></div>
+            <div class="slot" data-index="3"></div>
+            <div class="slot" data-index="4"></div>
+        </div>
+        <div id="buttons">
+            <button id="reset-button">Reiniciar</button>
+            <button id="recycle-button">Reciclar</button>
+        </div>
+        <div id="recycle-results"></div>
+    </div>
+
+    <div id="loading-screen" style="display:none;">
+        <div class="spinner"></div>
+    </div>
+
+    <div id="item-list"></div>
+
+</body>
+</html>

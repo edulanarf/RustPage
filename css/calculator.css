@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+.half-division {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.weapon-icon{
+    width: 60px;
+    height: 60px;
+}
+
+.icons{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100vw;
+}
+.buttons{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100vw;
+    margin-left:40px;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.input-formal {
+    width: 200px;
+    min-width: 200px;
+    padding: 10px;
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: 2px solid rgba(197, 65, 43, 0.6);
+    border-radius: 3px;
+    background-color: rgba(197, 65, 43, 0.1);
+    box-shadow: inset 0 1px 3px rgba(197, 65, 43, 0.15);
+    outline: none;
+    transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    color: #fff;
+    margin-right: 30px;
+}
+
+.input-formal:focus {
+    border-color: rgba(197, 65, 43, 1);
+    background-color: rgba(197, 65, 43, 0.15);
+    box-shadow: 0 0 6px rgba(197, 65, 43, 0.7);
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.materials-output {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.material-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 14px;
+    color: #fff;
+
+}
+
+.material-block img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+.reset-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+#reset-btn {
+    background-color: rgba(197, 65, 43, 0.2);
+    border: 1px solid rgba(197, 65, 43, 0.6);
+    color: rgba(197, 65, 43, 0.9);
+    padding: 10px 20px;
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+#reset-btn:hover {
+    background-color: rgba(197, 65, 43, 0.4);
+}
+
+#total-list {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#total-list .material-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
+}
+
+#total-list .material-block img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    margin-bottom: 5px;
+}
