@@ -1,5 +1,6 @@
 import * as THREE from 'https://unpkg.com/three@0.160.0/build/three.module.js';
 import { OrbitControls } from './orbitControls.js';
+import { GLTFLoader } from './gltfLoader.js';
 
 const scene = new THREE.Scene();
 
@@ -77,6 +78,10 @@ const controls = new OrbitControls(camera, renderer.domElement);
 /* Limitar el zoom */
 controls.minDistance = 1;
 controls.maxDistance = 20;
+
+/* aceleracion al usar clic izquierdo para rotar*/
+controls.enableDamping = true;
+controls.dampingFactor = 0.1;
 
 /* Animar el cubo */
 function render() {

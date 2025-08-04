@@ -8,6 +8,7 @@
   },
   "private": true,
   "dependencies": {
+    "node.js": "^0.0.1-security",
     "three": "^0.179.1"
   }
 }
