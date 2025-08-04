@@ -35,13 +35,12 @@ body{
 .link-header {
     text-decoration: none;
     position: relative;
-    align-self: flex-end;
+    align-items: flex-end;
     font-family: 'Bebas Neue', serif;
     color: #676767;
     font-size: 25px;
     cursor: pointer;
     transition: color 0.3s ease;
-    margin-top:20px;
     padding-right: 20px;
     padding-left: 20px;
 }
@@ -163,4 +162,77 @@ body{
     gap: 20px;
     justify-content: center;
     height: 100%;
+    align-items: flex-end; /* Alinea los items al fondo */
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    all: unset;
+    display: flex;
+    align-items: center;
+    height: 33px;      /* altura fija igual para todos */
+    padding: 0 20px;
+    font-family: 'Bebas Neue', serif;
+    color: #676767;
+    font-size: 25px;
+    cursor: pointer;
+    position: relative;
+    margin: 0;            /* elimina margen */
+    line-height: 1;       /* ajusta line height */
+}
+
+.dropbtn:hover {
+    color: rgba(197, 65, 43, 1);
+}
+
+.dropbtn::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background-color: rgba(197, 65, 43, 1);
+    transition: width 0.4s ease;
+}
+
+.dropbtn:hover::after {
+    width: 100%;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%; /* justo debajo del botón */
+    left: 0;
+    background-color: #1e1e1e;
+    border: 2px solid #a1352a;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.6);
+    z-index: 10;
+    margin-top: 0; /* eliminar margen extra */
+}
+
+.dropdown-content a {
+    font-family: 'Bebas Neue', serif;
+    color: #ccc;
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 20px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.dropdown-content a:hover {
+    background-color: #a1352a;
+    color: #fff;
+}
+
+/* Show menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
 }
