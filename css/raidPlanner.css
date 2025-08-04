@@ -103,3 +103,10 @@
 .delete-btn:hover {
     color: #ff4d4d;
 }
+
+#best-option {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
