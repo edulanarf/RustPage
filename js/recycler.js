@@ -160,15 +160,19 @@ slots.forEach((slot, index) => {
 
 let selectedItems = [null, null, null, null, null]; // Para 5 slots
 
-// Cuando se selecciona un item en el slot:
 function setItemInSlot(slotIndex, itemId) {
     const item = items.find(i => i.id === itemId);
-    if (item) {
-        selectedItems[slotIndex] = item;
-        document.querySelector(`.slot[data-index="${slotIndex}"]`).innerHTML = `
-            <img src="${item.img}" alt="${item.name}" title="${item.name}">
-        `;
-    }
+    if (!item) return;
+
+    const quantity = 1;
+
+    selectedItems[slotIndex] = { item, quantity };
+
+    const slot = document.querySelector(`.slot[data-index="${slotIndex}"]`);
+    slot.innerHTML = `
+        <img src="${item.img}" alt="${item.name}" title="${item.name}">
+        <input type="number" class="item-quantity-input" min="1" max="20" value="${quantity}" data-index="${slotIndex}">
+    `;
 }
 
 document.getElementById('recycle-button').addEventListener('click', () => {
@@ -184,10 +188,12 @@ document.getElementById('recycle-button').addEventListener('click', () => {
         // Tu código original de reciclaje aquí:
         const total = {}; // Materiales reciclados
 
-        selectedItems.forEach(item => {
-            if (item && item.yields) {
+        selectedItems.forEach(slotData => {
+            if (slotData && slotData.item && slotData.item.yields) {
+                const { item, quantity } = slotData;
+
                 for (let mat in item.yields) {
-                    total[mat] = (total[mat] || 0) + item.yields[mat];
+                    total[mat] = (total[mat] || 0) + item.yields[mat] * quantity;
                 }
             }
         });
@@ -235,4 +241,20 @@ document.getElementById('reset-button').addEventListener('click', () => {
 
     selectedSlot = null;
     selectedSlotIndex = null;
+});
+
+document.addEventListener('input', (event) => {
+    if (event.target.classList.contains('item-quantity-input')) {
+        const index = parseInt(event.target.getAttribute('data-index'));
+        let value = parseInt(event.target.value);
+
+        if (isNaN(value) || value < 1) value = 1;
+        if (value > 20) value = 20;
+
+        event.target.value = value; // Corrige visualmente
+
+        if (selectedItems[index]) {
+            selectedItems[index].quantity = value;
+        }
+    }
 });

@@ -10,9 +10,9 @@ html, body {
 
 header {
     display: grid;
-    grid-template-columns: 10% 90%;
+    grid-template-columns: 5% 90%;
     align-items: center;
-    height: 7vh; /* Asegurate que sea suficiente */
+    height: 7vh;
     background: #2c2c2c;
     position: sticky;
     top: 0;

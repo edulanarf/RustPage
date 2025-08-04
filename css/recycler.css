@@ -54,6 +54,7 @@
 
 #buttons{
     display: flex;
+    margin-top: 20px;
 }
 
 #slots-container {
@@ -131,3 +132,29 @@
     100% { transform: rotate(360deg); }
 }
 
+.slot input.item-quantity-input {
+    display: block;
+    margin: 6px auto 0 auto;
+    width: 48px;
+    height: 28px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    border: 2px solid #a1352a;
+    border-radius: 6px;
+    background-color: #1e1e1e;
+    color: #fff;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.slot input.item-quantity-input:focus {
+    border-color: #d14a3d;
+    box-shadow: 0 0 5px rgba(209, 74, 61, 0.6);
+}
+
+.slot input.item-quantity-input::-webkit-outer-spin-button,
+.slot input.item-quantity-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}

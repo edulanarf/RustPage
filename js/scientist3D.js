@@ -15,7 +15,7 @@ renderer.setSize(container.clientWidth, container.clientHeight);
 
 camera.position.z = 2;
 
-loader.load('../mock/rust_scientist_blue.glb', function (gltf) {
+loader.load('../assets/3D/rust_scientist_blue.glb', function (gltf) {
     model = gltf.scene;
 
     model.traverse((child) => {
