@@ -3,15 +3,24 @@ const explosives = [
     { id: "c4", name: "C4 Explosive", damage: 500, img: "../assets/explosive-timed.webp" },
     { id: "rocket", name: "Rocket", damage: 750, img: "../assets/rocket.webp" },
     { id: "f1_grenade", name: "Grenade", damage: 150, img: "../assets/grenade-f1.webp" },
-    { id: "molotov", name: "molotov", damage: 35, img: "../assets/rust-grenade-molotov-300x300.webp" },
+    { id: "molotov", name: "Molotov", damage: 35, img: "../assets/rust-grenade-molotov-300x300.webp" },
+    { id: "explosive_ammo", name: "Explosive 5.56 Rifle Ammo", damage: 20, img: "../assets/ammo-rifle-explosive.webp" }
 ];
 
 const materials = [
     {type: "hardWood", hp: 250, model: "../assets/wood-wall.webp", bestOption: [{ explosiveId: "molotov", quantity: 5 }]},
     {type: "hardStone", hp: 500, model: "../assets/stoneHardSide.png", bestOption: [{ explosiveId: "rocket", quantity: 4 }] },
     {type: "hardMetal", hp: 1000, model: "../assets/metalHardSide.png", bestOption: [{ explosiveId: "c4", quantity: 4 }] },
-    {type: "hardHQ", hp: 2000, model: "../assets/hqHardSide.png", bestOption: [{ explosiveId: "c4", quantity: 8 }] }
+    {type: "hardHQ", hp: 2000, model: "../assets/hqHardSide.png", bestOption: [{ explosiveId: "c4", quantity: 8 }] },
+    {type: "woodDoor", hp: 200, model: "../assets/door-hinged-wood.webp", bestOption: [{ explosiveId: "molotov", quantity: 2 }] },
+    {type: "metalDoor", hp: 250, model: "../assets/door-hinged-metal.webp", bestOption: [{ explosiveId: "rocket", quantity: 1 }, {explosiveId: "explosive_ammo", quantity: 8}]},
+    {type: "hqDoor", hp: 800, model: "../assets/door-hinged-toptier.webp", bestOption: [{ explosiveId: "c4", quantity: 1 }, {explosiveId: "explosive_ammo", quantity: 82}] },
+    {type: "garageDoor", hp: 600, model: "../assets/wall-frame-garagedoor.webp", bestOption: [{ explosiveId: "c4", quantity: 1 }, {explosiveId: "explosive_ammo", quantity: 40}] },
+    {type: "externalWood", hp: 500, model: "../assets/wall-external-high.webp", bestOption: [{ explosiveId: "molotov", quantity: 7 }] },
+    {type: "externalStone", hp: 500, model: "../assets/wall-external-high-stone.webp", bestOption: [{ explosiveId: "c4", quantity: 2 }] }
 ]
+
+
 
 const materialList = document.getElementById("materials-list");
 const bestOptionDiv  = document.getElementById("best-option");

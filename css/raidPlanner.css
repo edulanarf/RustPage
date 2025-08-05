@@ -3,7 +3,8 @@
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 60px;
+    margin-bottom: 60px;
     padding: 10px;
 }
 
@@ -57,7 +58,8 @@
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
-    margin-top: 20px;
+    margin-top: 60px;
+    margin-bottom: 60px;
     justify-content: center;
     padding: 10px;
 }
